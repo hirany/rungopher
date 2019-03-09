@@ -39,6 +39,7 @@ func runGopher() error {
 	w, h := termbox.Size()
 
 	var aa []rune
+	// ʕ◔ϖ◔ʔ
 	aa = append(aa, 'ʕ')
 	aa = append(aa, '◔')
 	aa = append(aa, 'ϖ')
@@ -48,7 +49,7 @@ func runGopher() error {
 	for i := 0; i < w; i++ {
 		termbox.Clear(backColor, backColor)
 		for k := range aa {
-			termbox.SetCell(w-i+k, h/2, aa[k], backColor, runeColor)
+			termbox.SetCell(w-i+k, h/2, rune(aa[k]), backColor, runeColor)
 		}
 		termbox.Flush()
 		time.Sleep(30 * time.Millisecond)
